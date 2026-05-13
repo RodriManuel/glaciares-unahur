@@ -1,0 +1,52 @@
+/*
+Pegar en el head antes de linkear al archivo styles.css para importar los tipos de letras:
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+Para vincular pegar abajo del anterior:
+<link rel="stylesheet" href="css/contacto.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/contacto.css">
+
+*/
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #E6F2F8;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin: 0;     /* No sé cómo hacer para que las palabras no estén pegadas al borde izquierdo (PREGUNTAR) */
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #1E5A8A;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #1E5A8A;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #1E5A8A;
+}
+
+#form-contacto{
+    background-color: #FFFFFF;  /* BLACO PARA QUE RESALTE*/
+    padding: 30px;
+    border-left: 8px solid #2D7D9D;  /*HACE UN DETALLE DE COLOR A LA IZQUIERDA*/
+    max-width: 600px;
+    margin: 20px auto;
+    
+}
+
+button{
+    background-color: #2E7D32;  /* Verde (O podemos poner el mismo celeste #1E5A8A) */
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;    /*NO ESTOY SEGURA DE LO QUE HACE*/
+    padding: 10px 25px;
+    border: #FFFFFF;
+}
+
