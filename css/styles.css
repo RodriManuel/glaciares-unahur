@@ -75,14 +75,21 @@ button{
     background-color: var(--verde-call-to-action); 
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
-    padding: 12px 24px;
     font-weight: bold;    
     padding: 10px 25px;
     border: #FFFFFF;
     border-radius: 25px;
-
 }
 
 button:hover {
     background-color: #1b5e20;       /* Efecto hover interactivo */
+}
+
+.img-tarjeta {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(11, 84, 168, 0.596); /* Hace sombra a las imágenes */
+    display: block;
+    margin: 15px 0;
 }
