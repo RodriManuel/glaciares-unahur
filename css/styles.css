@@ -35,6 +35,7 @@ body{
     padding: 0 1rem; 
 }
 
+
 /* Estilos diferenciados para headings */
 
 h1, h2, h3{
@@ -46,7 +47,7 @@ h1{font-size: 2.2rem;}
 h2{font-size: 1.8rem;}
 h3{font-size: 1.5rem;}
 
-/* FORMULARIOS (Contacto  */
+/* FORMULARIOS (Contacto)  */
 
 #form-contacto{
     background-color: #FFFFFF;  /* BLACO PARA QUE RESALTE*/
@@ -93,3 +94,5 @@ button:hover {
     display: block;
     margin: 15px 0;
 }
+
+
