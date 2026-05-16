@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/logo/logo-glaciares-unahur.svg" alt="logo_glaciares_unahur">
+    <img src="assets/logo/logo-glaciares-unahur-v7.png" alt="logo_glaciares_unahur">
 </p>
 
 # Glaciares UNAHUR
