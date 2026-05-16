@@ -59,8 +59,15 @@ header {
 }
 
 .nav-links ul li a {
+    color: var(--encabezado-destacado);
     text-decoration: none;
 }
+
+.nav-links ul li a:hover {
+    background-color: var(--fondo-general);
+    color: var(--seccion-clave);
+}
+
 
 /*ESTILOS GLOBALES SECCIONES DE CONTENIDO (section, article, párrafos)*/
 
