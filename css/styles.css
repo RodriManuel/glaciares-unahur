@@ -45,8 +45,9 @@ header {
     padding: 20px;
 }
 
-.logo {
-    width: 50%;
+.logo a img {
+    width: 192.5px;
+    height: 65px;
 }
 
 .nav-links ul {
