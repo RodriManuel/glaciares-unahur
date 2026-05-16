@@ -38,7 +38,7 @@ body{
 /*Estilos para la barra de navegación*/
 
 header {
-    background-color: var(--fondo-secundario);
+    background-color: var(--fondo-general);
     width: 100%;
     height: auto;
     display: flex;
@@ -48,10 +48,11 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    box-shadow: 0 1px 5px black;
 }
 
 main {
-    padding-top: 105px;
+    padding-top: 115px;
 }
 
 .logo a img {
@@ -71,7 +72,7 @@ main {
 }
 
 .nav-links ul li a:hover {
-    background-color: var(--fondo-general);
+    background-color: var(--fondo-secundario);
     color: var(--seccion-clave);
 }
 
