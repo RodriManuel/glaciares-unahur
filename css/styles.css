@@ -34,12 +34,20 @@ body{
     font-size: 16px;
     line-height: 1.6;
     background-color: var(--fondo-general);
+    background-image: url(../assets/img/glaciares/glaciar-background.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: var(--gris-texto);
     margin: 0 auto;
     max-width: 100%;    
     padding: 0 1rem; 
 }
 
+.section-contenido {
+    background-color: rgba(255, 255, 255, 0.8);
+}
 /*Estilos para la barra de navegación*/
 
 header {
