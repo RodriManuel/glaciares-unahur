@@ -6,6 +6,8 @@
     --fondo-secundario: #ABCDE1;
     --seccion-clave: #2D7D9D;
     --encabezado-destacado: #1E5ABA; 
+    --destacado-impacto: #1E5A8A;
+
 }
 
 /* Reset para eliminar todos los márgenes y rellenos predeterminados*/
@@ -85,6 +87,11 @@ main {
 
 /*ESTILOS GLOBALES SECCIONES DE CONTENIDO (section, article, párrafos)*/
 
+section {
+    margin-bottom: 40px;    
+    padding: 40px;
+}
+
 p {
     font-family: 'Lato', sans-serif;
     text-align: start;
@@ -109,9 +116,23 @@ h1, h2, h3{
     color: var(--encabezado-destacado);
 }
 
-h1{font-size: 2.2rem;}
-h2{font-size: 1.8rem;}
-h3{font-size: 1.5rem;}
+h1{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+h2{
+    font-size: 1.8rem;
+    margin-top: 25px;  
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-top: 25px;  
+    margin-bottom: 15px;
+}
 
 /* FORMULARIOS (Contacto)  */
 
@@ -226,4 +247,194 @@ footer h3{
 
 .redes-sociales img :hover{
     transform: scale(1.1);
+}
+
+/* ESTILOS APLICADOS EN nosotros.html */
+
+.contenedor-objetivos {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card-institucional {
+    flex: 1; 
+    background-color: #ffffff; /* Fondo blanco para resaltar */
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 5px solid var(--encabezado-destacado); 
+    box-shadow: 0 4px 12px #0000000D; 
+    
+}
+
+.card-institucional h2 {
+    color: var(--encabezado-destacado);
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-institucional p {
+    line-height: 1.7;
+    color: var(--gris-texto);
+    text-align: left; 
+}
+
+/*Imagenes Nosotros*/
+
+.fila-equipo {
+    display: flex;
+    gap: 30px;          
+    align-items: stretch; 
+    margin-top: 40px;
+}
+
+
+.galeria-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex: 0 0 70%;      
+}
+
+.galeria-equipo img {
+
+    flex: 1 1 calc(50% - 10px); 
+    height: 25rem;      
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*aside*/
+
+.cta-sumate {
+    flex: 0 0 calc(30% - 30px);
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 5px solid var(--encabezado-destacado);
+    box-shadow: 0 4px 10px #0000000D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-contenido h3 {
+    font-size: 1.2rem;
+    color: var(--encabezado-destacado);
+    margin-bottom: 15px;
+}
+
+.cta-contenido p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.cta-accion {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+}
+
+.boton-programas {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--verde-call-to-action);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.boton-programas:hover {
+    background-color: var(--seccion-clave); 
+}
+
+/*Formulario Aside */
+
+.formulario-unirse {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    flex-grow: 1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.campo input, .campo select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.boton-enviar {
+    background-color: var(--verde-call-to-action);
+    color: #FFFFFF;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px; 
+}
+
+.boton-enviar:hover {
+    background-color: var(--seccion-clave);
+}
+
+/* Tabla Objetivos */
+#objetivos .tabla-impacto {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+#objetivos .tabla-impacto th, 
+#objetivos .tabla-impacto td {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+#objetivos .tabla-impacto thead tr {
+    background-color: var(--encabezado-destacado);
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+#objetivos .tabla-impacto tbody tr {
+    border-bottom: 1px solid var(--fondo-secundario);
+    background-color: #FFFFFF;
+}
+
+#objetivos .tabla-impacto td strong {
+    color: var(--encabezado-destacado);
+}
+
+/*Lema de la ONG*/
+
+.lema-ONG {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--verde-call-to-action); 
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: var(--fondo-secundario); 
+    border-radius: 4px;
+    margin: 25px 0;
 }
