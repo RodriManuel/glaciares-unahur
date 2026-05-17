@@ -156,6 +156,26 @@ article {
     border-radius: 20px;
 }
 
+/*  Estilo Global para todas las Listas Desordenadas  */
+
+ul {
+    
+    list-style: none;
+    padding-left: 0;
+}
+
+main ul li, section ul li {
+    color: var(--encabezado-destacado);  
+    background-image: url(/assets/icons/drop-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px; 
+    background-position: left center;
+    padding-left: 30px;  
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
 /* Estilos diferenciados para headings */
 
 h1, h2, h3{
@@ -349,8 +369,8 @@ footer h3{
 
 .fila-equipo {
     display: flex;
+    flex-wrap: wrap;  
     gap: 30px;          
-    align-items: stretch; 
     margin-top: 40px;
 }
 
@@ -359,29 +379,29 @@ footer h3{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    flex: 0 0 70%;      
+    flex: 1 1 600px;     
 }
 
 .galeria-equipo img {
-
-    flex: 1 1 calc(50% - 10px); 
-    height: 25rem;      
+    flex: 1 1 calc(50% - 15px); 
+    height: auto;       
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 8px;
+    min-width: 250px;
 }
 
 /*aside*/
 
 .cta-sumate {
-    flex: 0 0 calc(30% - 30px);
+    flex: 1 1 300px;    
     background-color: #FFFFFF;
     padding: 25px;
     border-radius: 8px;
     border-top: 5px solid var(--encabezado-destacado);
     box-shadow: 0 4px 10px #0000000D;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column
 }
 
 .cta-contenido h3 {
