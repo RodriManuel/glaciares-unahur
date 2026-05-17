@@ -384,6 +384,7 @@ footer h3{
 
 .galeria-equipo img {
     flex: 1 1 calc(50% - 15px); 
+    width: 100%;
     height: auto;       
     aspect-ratio: 4 / 3;
     object-fit: cover;
