@@ -55,6 +55,10 @@ body{
     background-color: var(--fondo-general);
 }
 
+.section-presentacion p {
+    text-align: center;
+}
+
 /*Estilos para la barra de navegación*/
 
 header {
