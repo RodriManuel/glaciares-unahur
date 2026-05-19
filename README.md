@@ -50,7 +50,8 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
 - Git y Github (control de versiones)
 - Matplotlib (para crear los gráficos)
 
-## Estructura de direcorios del proyecto (Etapa 1: Estructura HTML)
+## Estructura de direcorios del proyecto 
+### Etapa 1: Estructura HTML
     tp_ong_grupo_1/                 
     ├── index.html  
     ├── nosotros.html   
@@ -64,6 +65,26 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
             ├── glaciares/  
             ├── gráficos/
             └── nosotros/
+
+### Etapa 2: Estilos con CSS
+    tp_ong_grupo_1/                 
+    ├── index.html  
+    ├── nosotros.html   
+    ├── programas.html  
+    ├── contacto.html
+    ├── informe_glaciares.html
+    ├── glaciares_argentinos.html    
+    ├── assets/  
+    │   ├── icons/  
+    │   ├── img/   
+    │   │   ├── glaciares/  
+    │   │   ├── gráficos/
+    │   │   ├── nosotros/
+    │   │   └── noticias/
+    │   └── logo/
+    │
+    └── css/
+        └── styles.css
 
 ## Cómo ejecutar el proyecto
 1. clonar el repositorio: git clone https://github.com/RodriManuel/tp-ong-grupo-1.git
