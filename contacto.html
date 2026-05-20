@@ -51,46 +51,48 @@
             <p>Email: fundacionglaciar@gmail.com</p>
         </section>
 
-        <section id="form-contacto">
-            <h2>Envianos un mensaje</h2>
-            <form action="#" method="post">
-                <label for="nombre">Tu nombre (obligatorio):</label><br>
-                <input type="text" id="nombre" name="nombre" 
-                    placeholder="Ej.: Juan Perez" required><br><br>
+        <div id="formularios">
 
-                <label for="email">Tu correo electrónico (obligatorio):</label><br>
-                <input type="email" id="email" name="email" 
-                    placeholder="tu@email.com" required><br><br>
+            <section id="form-contacto">
+                <h2>Envianos un mensaje</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Tu nombre (obligatorio):</label><br>
+                    <input type="text" id="nombre" name="nombre" 
+                        placeholder="Ej.: Juan Perez" required><br><br>
 
-                <label for="asunto">Asunto:</label><br>
-                <input type="text" id="asunto" name="asunto"><br><br>
+                    <label for="email">Tu correo electrónico (obligatorio):</label><br>
+                    <input type="email" id="email" name="email" 
+                        placeholder="tu@email.com" required><br><br>
 
-                <label for="mensaje">Tu mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos de vos"></textarea> <br><br>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+                    <label for="asunto">Asunto:</label><br>
+                    <input type="text" id="asunto" name="asunto"><br><br>
 
-        <section id="form-newsletter">
-            <figure id="logo-form">
-                <img src="assets/logo/logo-glaciares-unahur-v7.png" alt="">
-            </figure>
-            <h2>Newsletter</h2>
-            <p id="newsletter-primer-parrafo"">¡Enterate de todas nuestras novedades! <br> Suscribíte a nuestro Newsletter</p>
-            <form action="#" method="post">
-                <input type="email" id="news-email" name="news-email" placeholder="Email" required> <br>
-                
-                <input type="text" id="news-nombre" name="news-nombre" placeholder="Nombre"> <br>
+                    <label for="mensaje">Tu mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos de vos"></textarea> <br><br>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
 
-                <input type="text" id="news-nombre" name="news-nombre" placeholder="Apellido"> <br>
-                
-                <button type="submit">SUSCRIBIRME</button>            
-            </form> 
-            <br>
-            <p>No te olvides de revisar tu correo para validar la suscripción.</p>
-        </section>
+            <section id="form-newsletter">
+                <figure id="logo-form">
+                    <img src="assets/logo/logo-glaciares-unahur-v7.png" alt="">
+                </figure>
+                <h2>Newsletter</h2>
+                <p id="newsletter-primer-parrafo"">¡Enterate de todas nuestras novedades! <br> Suscribíte a nuestro Newsletter</p>
+                <form action="#" method="post">
+                    <input type="email" id="news-email" name="news-email" placeholder="Email" required> <br>
+                    
+                    <input type="text" id="news-nombre" name="news-nombre" placeholder="Nombre"> <br>
 
+                    <input type="text" id="news-nombre" name="news-nombre" placeholder="Apellido"> <br>
+                    
+                    <button type="submit">SUSCRIBIRME</button>            
+                </form> 
+                <br>
+                <p>No te olvides de revisar tu correo para validar la suscripción.</p>
+            </section>
+        </div>
     </main>
 
     <footer>
