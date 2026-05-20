@@ -1,8 +1,8 @@
+# Glaciares UNAHUR
 <p align="center">
     <img src="assets/logo/logo-glaciares-unahur-v7.png" alt="logo_glaciares_unahur">
 </p>
 
-# Glaciares UNAHUR
 Sitio web institucional desarrollado en el contexto de trabajo práctico grupal para la materia **Lenguajes Informáticos I**.
 
 La intención del proyecto es concientizar sobre la importancia de los glaciares en Argentina, su estado actual y promover acciones para su preservación.
@@ -43,16 +43,16 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
 - **glaciares_argentinos.html:** Página sobre datos relacionados a los glaciares de Argentina.
 
 ## Tecnologías utilizadas
-- HTML5
-- CSS3 (en etapas posteriores)
-- Bootstrap (en etapas posteriores)
-- JavaScript (en etapa final)
-- Git y Github (control de versiones)
-- Matplotlib (para crear los gráficos)
+![Static Badge](https://img.shields.io/badge/HTML5-white?logo=html5&logoColor=white&color=E34F26) 
+![Static Badge](https://img.shields.io/badge/CSS3-white?logo=css&logoColor=white&color=3C99DC) <br>
+![Static Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&color=7952B3) <br>
+![Static Badge](https://img.shields.io/badge/JavaScript-white?logo=javascript&logoColor=black&color=F7DF1E) <br>
+![Static Badge](https://img.shields.io/badge/Git-white?logo=git&logoColor=white&color=F05032)
+![Static Badge](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=white&color=181717)
 
 ## Estructura de direcorios del proyecto 
 ### Etapa 1: Estructura HTML
-    tp_ong_grupo_1/                 
+    Glaciares-UNAHUR/                 
     ├── index.html  
     ├── nosotros.html   
     ├── programas.html  
@@ -66,8 +66,8 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
             ├── gráficos/
             └── nosotros/
 
-### Etapa 2: Estilos con CSS
-    tp_ong_grupo_1/                 
+### Etapa 2: Estilos CSS
+    Glaciares-UNAHUR/                 
     ├── index.html  
     ├── nosotros.html   
     ├── programas.html  
@@ -103,7 +103,7 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
 
 ## Etapas del proyecto
 - Etapa 1: Estructura HTML ☑️
-- Etapa 2: Estilos CSS
+- Etapa 2: Estilos CSS ☑️
 - Etapa 3: Bootstrap
 - Etapa 4: JavaScript
 
