@@ -615,6 +615,7 @@ footer h3{
 }
 
 #form-contacto{
+    width: 100%;
     background-color: #FFFFFF;  /* BLACO PARA QUE RESALTE*/
     padding: 40px;
     border-radius: 8px;
@@ -636,6 +637,7 @@ textarea{
 }
 
  #form-newsletter {
+    width: 100%;
     background-color: var(--fondo-secundario);      
     padding: 40px;
     border-radius: 8px;
