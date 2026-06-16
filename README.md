@@ -7,25 +7,36 @@ Sitio web institucional desarrollado en el contexto de trabajo práctico grupal 
 
 La intención del proyecto es concientizar sobre la importancia de los glaciares en Argentina, su estado actual y promover acciones para su preservación.
 
+## Sobre la temática del TP
+Los glaciares son reservas estratégicas de agua dulce. En Argentina, su retroceso es una problemática creciente debido al cambio climático.
+
+Este sitio busca informar y generar conciencia sobre su importancia.
+
 ## Objetivos del Proyecto
 - Desarrollar un sitio web institucional de una ONG ficticia.
 - Aplicar buenas prácticas con HTML.
 - Trabajar colaborativamente usando Git y Github.
 - Construir el proyecto de forma incremental: HTML > CSS > Bootstrap > JavaScript
 
+## Etapas del proyecto
+- Etapa 1: Estructura HTML ☑️
+- Etapa 2: Estilos CSS ☑️
+- Etapa 3: Bootstrap ☑️
+- Etapa 4: JavaScript
+
 ## Equipo y distribución del trabajo
-- Rodrigo Perez: **Página de inicio** e informativas
+- Rodrigo Perez:
   - **index.html**
   - informe_glaciares.html
   - glaciares_argentinos.html
 
-- Celeste Gonzalez Ortiz: **Sección Nosotros**
+- Celeste Gonzalez Ortiz:
   - **nosotros.html**
 
-- Julieta Mendez: **Sección Programas**
+- Julieta Mendez:
   - **programas.html**
 
-- Todos juntos, a falta de un 4to integrante: **Sección de Contacto**
+- Todos juntos:
   - **contacto.html**
 
 ## Estructura del sitio
@@ -50,23 +61,7 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
 ![Static Badge](https://img.shields.io/badge/Git-white?logo=git&logoColor=white&color=F05032)
 ![Static Badge](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=white&color=181717)
 
-## Estructura de direcorios del proyecto 
-### Etapa 1: Estructura HTML
-    Glaciares-UNAHUR/                 
-    ├── index.html  
-    ├── nosotros.html   
-    ├── programas.html  
-    ├── contacto.html
-    ├── informe_glaciares.html
-    ├── glaciares_argentinos.html    
-    └── assets/  
-        ├── icons/  
-        └── img/   
-            ├── glaciares/  
-            ├── gráficos/
-            └── nosotros/
-
-### Etapa 2: Estilos CSS
+## Estructura de directorios del proyecto 
     Glaciares-UNAHUR/                 
     ├── index.html  
     ├── nosotros.html   
@@ -83,8 +78,10 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
     │   │   └── noticias/
     │   └── logo/
     │
-    └── css/
-        └── styles.css
+    ├── css/
+    │   └── styles.css
+    └── js/
+        └── scripts.js
 
 ## Cómo ejecutar el proyecto
 1. clonar el repositorio: git clone https://github.com/RodriManuel/tp-ong-grupo-1.git
@@ -100,14 +97,3 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
   - fix: correcciones
   - style: estilos
   - docs: documentación
-
-## Etapas del proyecto
-- Etapa 1: Estructura HTML ☑️
-- Etapa 2: Estilos CSS ☑️
-- Etapa 3: Bootstrap
-- Etapa 4: JavaScript
-
-## Sobre la temática del TP
-Los glaciares son reservas estratégicas de agua dulce. En Argentina, su retroceso es una problemática creciente debido al cambio climático.
-
-Este sitio busca informar y generar conciencia sobre su importancia.
