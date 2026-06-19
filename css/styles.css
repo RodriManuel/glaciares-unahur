@@ -123,6 +123,7 @@ main {
 .nav-links ul li a {
     color: var(--encabezado-destacado);
     text-decoration: none;
+    padding-left: 10px;
 }
 
 .nav-links ul li a:hover {
