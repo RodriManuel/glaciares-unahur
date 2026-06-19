@@ -135,6 +135,10 @@ main {
     background-color: var(--fondo-secundario);
 }
 
+header div button:hover {
+    background-color: var(--fondo-secundario);
+}
+
 /*ESTILOS GLOBALES SECCIONES DE CONTENIDO (section, article, párrafos)*/
 
 section {
