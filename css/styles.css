@@ -220,6 +220,40 @@ figure img {
     height: 100%;
 }
 
+/* Tabla en glaciares-argentinos.html */
+.tabla-glaciares {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-glaciares th {
+    background-color: #204564;
+    color: #FFFFFF;
+    padding: 14px;
+    text-align: left;  
+}
+
+.tabla-glaciares td {
+    padding: 12px;
+    border: 1px solid var(--fondo-general);
+}
+
+.tabla-glaciares tr:nth-child(even) {
+    background-color: var(--fondo-secundario);
+}
+
+.tabla-glaciares tr:nth-child(odd) {
+    background-color: var(--fondo-general);
+}
+
+.tabla-glaciares tr:hover {
+    background-color: #204564;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
 
 button{
     background-color: var(--verde-call-to-action); 
