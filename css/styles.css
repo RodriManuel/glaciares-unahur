@@ -17,18 +17,7 @@
   box-sizing: border-box;
 }
 
-/*
-Pegar en el head antes de linkear al archivo styles.css para importar los tipos de letras y
-Para vincular :
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-*/
-
 /* ESTILOS GLOBALES Y BODY (Tipografía y Estructura Global) */
-
 body{
     font-family: 'Lato', sans-serif;
     font-size: 16px;
@@ -40,10 +29,7 @@ body{
     background-position: center;
     background-size: cover;
     color: var(--gris-texto);
-    margin: 0 auto;
-    overflow-x: hidden;
-    max-width: 100%;    
-    padding: 0 1rem; 
+    margin: 0;
 }
 
 .section-contenido {
@@ -51,8 +37,6 @@ body{
 }
 
 .section-presentacion {
-    margin-right: -20px;
-    margin-left: -20px;
     background-color: var(--fondo-general);
 }
 
@@ -308,8 +292,6 @@ button:hover {
 
 /* FOOTER */
 footer{
-    margin-left: -2.5rem;
-    margin-right: -2.5rem;
     background-color: #131A30;
     color: var(--fondo-general);
     text-align: center;
