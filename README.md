@@ -7,24 +7,31 @@ Sitio web institucional desarrollado en el contexto de trabajo práctico grupal 
 
 La intención del proyecto es concientizar sobre la importancia de los glaciares en Argentina, su estado actual y promover acciones para su preservación.
 
-## Sobre la temática del TP
-Los glaciares son reservas estratégicas de agua dulce. En Argentina, su retroceso es una problemática creciente debido al cambio climático.
+**Link del proyecto:** [Visitar Página](https://glaciares-unahur.vercel.app/)
 
-Este sitio busca informar y generar conciencia sobre su importancia.
-
-## Objetivos del Proyecto
+## Sobre el Proyecto
+### Objetivos
 - Desarrollar un sitio web institucional de una ONG ficticia.
 - Aplicar buenas prácticas con HTML.
 - Trabajar colaborativamente usando Git y Github.
 - Construir el proyecto de forma incremental: HTML > CSS > Bootstrap > JavaScript
 
-## Etapas del proyecto
+### Etapas del proyecto
 - Etapa 1: Estructura HTML ☑️
 - Etapa 2: Estilos CSS ☑️
 - Etapa 3: Bootstrap ☑️
-- Etapa 4: JavaScript
+- Etapa 4: JavaScript ☑️
 
-## Equipo y distribución del trabajo
+### Tecnologías utilizadas
+![HTML5](https://img.shields.io/badge/HTML5-white?logo=html5&logoColor=white&color=E34F26) 
+![CSS3](https://img.shields.io/badge/CSS3-white?logo=css&logoColor=white&color=3C99DC) <br>
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&color=7952B3) <br>
+![JavaScript](https://img.shields.io/badge/JavaScript-white?logo=javascript&logoColor=black&color=F7DF1E) <br>
+![Git](https://img.shields.io/badge/Git-white?logo=git&logoColor=white&color=F05032)
+![GitHub](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=white&color=181717) <br>
+![Vercel](https://img.shields.io/badge/vercel-black?&logo=vercel&logoColor=white)
+
+### Equipo y distribución del trabajo
 - Rodrigo Perez:
   - **index.html**
   - informe_glaciares.html
@@ -52,14 +59,6 @@ Este sitio busca informar y generar conciencia sobre su importancia.
 ### Páginas extras:
 - **informe_glaciares.html:** Resumen sin tecnicismos de un estudio sobre la situación de los glaciares realizado por **Ricardo Villaba**, Investigador del **CONICET**.
 - **glaciares_argentinos.html:** Página sobre datos relacionados a los glaciares de Argentina.
-
-## Tecnologías utilizadas
-![Static Badge](https://img.shields.io/badge/HTML5-white?logo=html5&logoColor=white&color=E34F26) 
-![Static Badge](https://img.shields.io/badge/CSS3-white?logo=css&logoColor=white&color=3C99DC) <br>
-![Static Badge](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white&color=7952B3) <br>
-![Static Badge](https://img.shields.io/badge/JavaScript-white?logo=javascript&logoColor=black&color=F7DF1E) <br>
-![Static Badge](https://img.shields.io/badge/Git-white?logo=git&logoColor=white&color=F05032)
-![Static Badge](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=white&color=181717)
 
 ## Estructura de directorios del proyecto 
     Glaciares-UNAHUR/                 
