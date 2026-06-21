@@ -125,6 +125,10 @@ header div button:hover {
 
 /*ESTILOS GLOBALES SECCIONES DE CONTENIDO (section, article, párrafos)*/
 
+.tabla-container {
+    overflow-x: auto;
+}
+
 section {
     margin-bottom: 40px;    
     padding: 40px;
