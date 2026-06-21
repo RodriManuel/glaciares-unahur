@@ -645,10 +645,6 @@ footer h3{
 }
 
 /* Página de contacto: formularios y mapas  */
-#mapa {
-    width: 100%;
-}
-
 #mapa iframe {
     width: 100%;
     height: 400px;
