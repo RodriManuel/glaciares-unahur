@@ -695,11 +695,6 @@ textarea{
     justify-content: center;
 }
 
-#logo-form img {
-    width: 192.5px;
-    height: 65px;
-}
-
 #form-newsletter h2 {
     background-color: var(--fondo-general);
     margin-left: -2.5rem;
