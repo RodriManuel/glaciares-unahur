@@ -367,7 +367,7 @@ footer h3{
     transition: transform 0.2s;
 }
 
-.redes-sociales img :hover{
+.redes-sociales img:hover{
     transform: scale(1.1);
 }
 
