@@ -442,12 +442,6 @@ footer h3{
     margin-bottom: 20px;
 }
 
-.cta-accion {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-}
-
 /*Formulario Aside */
 
 .formulario-unirse {
