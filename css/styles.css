@@ -359,28 +359,6 @@ footer h3{
     max-width: none !important;
 }
 
-/*.card-institucional {
-    flex: 1; 
-    background-color: #ffffff; /* Fondo blanco para resaltar 
-    padding: 30px;
-    border-radius: 8px;
-    border-top: 5px solid var(--encabezado-destacado); 
-    box-shadow: 0 4px 12px #0000000D; 
-    
-}
-
-.card-institucional h2 {
-    color: var(--encabezado-destacado);
-    margin-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.card-institucional p {
-    line-height: 1.7;
-    color: var(--gris-texto);
-    text-align: left; 
-}*/
-
 /*Imagenes Nosotros*/
 
 .fila-equipo {
