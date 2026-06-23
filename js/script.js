@@ -33,3 +33,32 @@ formNewsletter.addEventListener("submit", (e) => {
 
     formNewsletter.reset();
 });
+
+// Formulario "Unite al equipo" (Nosotros)
+const formJoin = document.getElementById("join-form");
+const inputJoinNombre = document.getElementById("join-nombre");
+const inputJoinEmail = document.getElementById("join-email");
+const msgJoin = document.getElementById("join-message");
+
+if (formJoin) {
+    formJoin.addEventListener("submit", (e) => {
+        e.preventDefault(); 
+        const nombre = inputJoinNombre.value.trim();
+        const email = inputJoinEmail.value.trim();
+
+        if (nombre === "") {
+            msgJoin.textContent = "Por favor, ingresá tu nombre completo.";
+            msgJoin.style.color = "#B71C1C"; 
+            return;
+        }
+        if (email.length < 4 || !email.includes("@")) {
+            msgJoin.textContent = "Por favor, ingresá un correo válido.";
+            msgJoin.style.color = "#B71C1C"; 
+            return;
+        }
+        msgJoin.textContent = `¡Postulación enviada con éxito! Gracias por sumarte, ${nombre}.`;
+        msgJoin.style.color = "#1A6B2A"; 
+
+        formJoin.reset(); 
+    });
+}
