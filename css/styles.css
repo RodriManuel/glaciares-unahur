@@ -9,7 +9,18 @@
     --destacado-impacto: #1E5A8A;
     --hoover-azul: #0D47A1;
     --hoover-verde: #1B5E20;
+}
 
+.dark-mode {
+    --verde-call-to-action: #2E7D32;
+    --gris-texto: #4A4A4A;
+    --fondo-general: #c5d3da;
+    --fondo-secundario: #91b2c5;
+    --seccion-clave: #286d88;
+    --encabezado-destacado: #13489c; 
+    --destacado-impacto: #174a74;
+    --hoover-azul: #0D47A1;
+    --hoover-verde: #1B5E20;
 }
 
 /* Reset para eliminar todos los márgenes y rellenos predeterminados*/
@@ -367,7 +378,7 @@ footer h3{
     transition: transform 0.2s;
 }
 
-.redes-sociales img:hover{
+.redes-sociales img :hover{
     transform: scale(1.1);
 }
 
