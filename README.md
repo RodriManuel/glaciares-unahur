@@ -46,6 +46,12 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
 - Todos juntos:
   - **contacto.html**
 
+### Cómo ejecutar el proyecto
+1. clonar el repositorio: git clone https://github.com/RodriManuel/glaciares-unahur.git
+
+2. Abrir el archivo **index.html** en el navegador.
+
+
 ## Estructura del sitio
 ### Páginas mínimas propuestas por el TP:
 - **index.html:** Presentación de la ONG y problematica de los glaciares en Argentina; redirección hacia las demás secciones del sitio y noticias de actualidad.
@@ -61,7 +67,7 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
 - **glaciares_argentinos.html:** Página sobre datos relacionados a los glaciares de Argentina.
 
 ## Estructura de directorios del proyecto 
-    Glaciares-UNAHUR/                 
+    glaciares-unahur/                 
     ├── index.html  
     ├── nosotros.html   
     ├── programas.html  
@@ -80,12 +86,7 @@ La intención del proyecto es concientizar sobre la importancia de los glaciares
     ├── css/
     │   └── styles.css
     └── js/
-        └── scripts.js
-
-## Cómo ejecutar el proyecto
-1. clonar el repositorio: git clone https://github.com/RodriManuel/tp-ong-grupo-1.git
-
-2. Abrir el archivo **index.html** en el navegador.
+        └── script.js
 
 ## Metodología de trabajo
 - Se utilizó GitHub para la gestión del proyecto.
