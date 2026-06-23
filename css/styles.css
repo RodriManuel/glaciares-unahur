@@ -45,53 +45,7 @@ body{
     margin: 0;
 }
 
-.section-contenido {
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.section-contenido div p {
-    padding: 0;
-}
-
-.section-presentacion {
-    background-color: var(--fondo-general);
-}
-
-.section-presentacion p {
-    text-align: center;
-}
-
 /*Estilos para la barra de navegación*/
-
-.cards-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;     
-    gap: 20px;             
-    justify-content: space-around;
-}
-
-.card {
-    width: 350px;
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: var(--fondo-general);
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    cursor: default;
-}
-
-.card img {
-    width: 100%;
-    height: 210px;    
-    object-fit: cover;     
-    border-radius: 0;  
-}
-
-.card .card-info {
-    padding: 15px;
-}
 
 header {
     background-color: var(--fondo-general);
@@ -141,6 +95,53 @@ main {
 header div button:hover {
     background-color: var(--fondo-secundario);
 }
+
+.section-contenido {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.section-contenido div p {
+    padding: 0;
+}
+
+.section-presentacion {
+    background-color: var(--fondo-general);
+}
+
+.section-presentacion p {
+    text-align: center;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;     
+    gap: 20px;             
+    justify-content: space-around;
+}
+
+.card {
+    width: 350px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--fondo-general);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;    
+    object-fit: cover;     
+    border-radius: 0;  
+}
+
+.card .card-info {
+    padding: 15px;
+}
+
 
 /*ESTILOS GLOBALES SECCIONES DE CONTENIDO (section, article, párrafos)*/
 
@@ -341,45 +342,6 @@ figure img {
 /* Alternancia de color en las filas */
 .tabla-proyectos tbody tr:nth-child(even){
     background-color: var(--fondo-general);
-}
-
-/* FOOTER */
-footer{
-    background-color: #131A30;
-    color: var(--fondo-general);
-    text-align: center;
-    padding: 30px 15px;
-    margin-top: 40px;
-    border-radius: 8px 8px 0 0;
-}
-
-footer p{
-    font-size: 0.9rem;
-    margin-top: 10px;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-footer h3{
-    font-size: 1rem;
-    color: #FFFFFF;
-}
-
-.redes-sociales{
-    display: flex;
-    justify-content:center;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.redes-sociales img{
-    /*este filtro cambia los íconos de negro a blanco para que resalten con el color azul del fondo*/
-    filter: brightness(0) invert(1);
-    transition: transform 0.2s;
-}
-
-.redes-sociales img :hover{
-    transform: scale(1.1);
 }
 
 /* ESTILOS APLICADOS EN nosotros.html */
@@ -725,4 +687,42 @@ textarea{
 
 #form-newsletter form {
     text-align: center;
+}
+
+/* FOOTER */
+footer{
+    background-color: #131A30;
+    color: var(--fondo-general);
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 40px;
+}
+
+footer p{
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer h3{
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales img{
+    /*este filtro cambia los íconos de negro a blanco para que resalten con el color azul del fondo*/
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s;
+}
+
+.redes-sociales img :hover{
+    transform: scale(1.1);
 }
