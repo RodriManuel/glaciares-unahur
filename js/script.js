@@ -56,7 +56,7 @@ formContacto.addEventListener("submit",(e) =>{
         msgContacto.style.color = "#B71C1C";
         return;
     }
-    msgContacto.textContent = '¡Mensaje enviado con éxito! Gracias por escribirnos, ${nombre}.';
+    msgContacto.textContent = `¡Mensaje enviado con éxito! Gracias por escribirnos, ${nombre}.`;
     msgContacto.style.color = "#1A6B2A"; 
 
     formContacto.reset()
