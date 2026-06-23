@@ -1,3 +1,16 @@
+// Modo Oscuro
+const btnModo = document.getElementById("btn-modo");
+
+btnModo.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    // Verifica si el modo oscuro quedó activo
+    const modoActivo = document.body.classList.contains("dark-mode");
+
+    // Cambia el texto del botón según el estado actual
+    btnModo.textContent = modoActivo ? "☀️" : "🌙";
+});
+
 
 // Validación de formularios
 
