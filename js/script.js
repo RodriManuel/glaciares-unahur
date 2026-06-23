@@ -26,7 +26,7 @@ formNewsletter.addEventListener("submit", (e) => {
 
     const email = inputEmail.value.trim();
     const nombre = inputNombre.value.trim();
-    const mensaje = inputApellido.value.trim();
+    const apellido = inputApellido.value.trim();
 
     if (email.length < 4 || !email.includes("@")) {
         msgNewsletter.textContent = "Por favor ingresá un email válido.";
@@ -34,7 +34,7 @@ formNewsletter.addEventListener("submit", (e) => {
         return;
     }
 
-    if (nombre === "" || mensaje === "") {
+    if (nombre === "" || apellido === "") {
         msgNewsletter.textContent = "Completá todos los campos antes de enviar.";
         msgNewsletter.className = "error";
         msgNewsletter.style.color = "#B71C1C";
