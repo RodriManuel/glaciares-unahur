@@ -65,7 +65,7 @@
 
             <section id="form-contacto">
                 <h2>Envianos un mensaje</h2>
-                <form action="#" method="post">
+                <form id="form-mensaje" action="#" method="post">
                     <label for="nombre">Tu nombre (obligatorio):</label><br>
                     <input type="text" id="nombre" name="nombre" 
                         placeholder="Ej.: Juan Perez" required><br><br>
@@ -81,6 +81,7 @@
                     <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos de vos"></textarea> <br><br>
                     
                     <button type="submit">Enviar</button>
+                    <div id="contacto-message" class="mt-2" style="font-weight: bold;"></div>
                 </form>
             </section>
 
