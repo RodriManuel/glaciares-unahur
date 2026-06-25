@@ -22,6 +22,7 @@
     --destacado-impacto: #174a74;
     --hoover-azul: #3B9CC3;
     --hoover-verde: #1B5E20;
+    --fondo-imagen: url('../assets/img/glaciares/glaciar-background.webp');
 }
 
 /* Reset para eliminar todos los márgenes y rellenos predeterminados*/
