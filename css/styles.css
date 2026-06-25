@@ -1,9 +1,9 @@
 /*Estilos generales para Glaciares UNAHUR*/
 :root {
-    --verde-call-to-action: #2E7D32;
-    --gris-texto: #4A4A4A;
     --fondo-general: #E6F2F8;
     --fondo-secundario: #ABCDE1;
+    --verde-call-to-action: #2E7D32;
+    --gris-texto: #4A4A4A;
     --seccion-clave: #2D7D9D;
     --encabezado-destacado: #1E5ABA; 
     --destacado-impacto: #1E5A8A;
@@ -12,14 +12,14 @@
 }
 
 .dark-mode {
+    --fondo-general: #0F172A;
+    --fondo-secundario: #1E293B;
     --verde-call-to-action: #2E7D32;
-    --gris-texto: #4A4A4A;
-    --fondo-general: #c5d3da;
-    --fondo-secundario: #91b2c5;
+    --gris-texto: #E2E8F0;
     --seccion-clave: #286d88;
-    --encabezado-destacado: #13489c; 
+    --encabezado-destacado: #60A5FA; 
     --destacado-impacto: #174a74;
-    --hoover-azul: #0D47A1;
+    --hoover-azul: #3B9CC3;
     --hoover-verde: #1B5E20;
 }
 
