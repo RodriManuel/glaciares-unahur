@@ -8,7 +8,7 @@ btnModo.addEventListener("click", () => {
     const modoActivo = document.body.classList.contains("dark-mode");
 
     // Cambia el texto del botón según el estado actual
-    btnModo.textContent = modoActivo ? "☀️" : "🌙";
+    btnModo.textContent = modoActivo ? "☀️" : "🌒";
 });
 
 
