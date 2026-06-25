@@ -64,16 +64,20 @@ header {
 
 #btn-modo {
     border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-
 }
 
 #btn-modo:hover {
-    background-color: transparent; /* O el color de fondo original de tu botón */
-    color: inherit;                /* Mantiene el color de texto original */
+    background-color: transparent;
+    color: inherit;                
 }
 
 .navbar-toggler:hover {
-    background-color: #3a578d;
+    background-color: var(--fondo-secundario);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 main {
