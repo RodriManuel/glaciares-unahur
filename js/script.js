@@ -1,11 +1,24 @@
 // Modo Oscuro
 const btnModo = document.getElementById("btn-modo");
+const configActual = localStorage.getItem('theme');
+
+// Verifica si ya hay preferencia guardada o usa la del sistema.
+if (configActual === 'dark' || (!configActual && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.body.classList.toggle("dark-mode");
+}
 
 btnModo.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
     // Verifica si el modo oscuro quedó activo
     const modoActivo = document.body.classList.contains("dark-mode");
+
+    // Guarda la elección actual en localStorage,
+    if (modoActivo) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
 
     // Cambia el texto del botón según el estado actual
     btnModo.textContent = modoActivo ? "☀️" : "🌒";
