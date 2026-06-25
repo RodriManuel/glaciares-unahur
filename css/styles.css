@@ -9,6 +9,7 @@
     --destacado-impacto: #1E5A8A;
     --hoover-azul: #0D47A1;
     --hoover-verde: #1B5E20;
+    --fondo-imagen: url('../assets/img/glaciares/perito_moreno_glaciar_2023.jpg');
 }
 
 .dark-mode {
@@ -36,7 +37,7 @@ body{
     font-size: 16px;
     line-height: 1.6;
     background-color: var(--fondo-general);
-    background-image: url(../assets/img/glaciares/glaciar-background.webp);
+    background-image: var(--fondo-imagen);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
