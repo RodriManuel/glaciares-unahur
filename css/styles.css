@@ -635,7 +635,9 @@ figure img {
 #formularios {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #form-contacto{
