@@ -3,8 +3,16 @@ const btnModo = document.getElementById("btn-modo");
 const configActual = localStorage.getItem('theme');
 
 // Verifica si ya hay preferencia guardada o usa la del sistema.
-if (configActual === 'dark' || (!configActual && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.body.classList.toggle("dark-mode");
+
+// Determina si debe arrancar en modo oscuro (por localStorage o sistema)
+const esOscuro = configActual === 'dark' || (!configActual && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+if (esOscuro) {
+    document.body.classList.add("dark-mode");
+    btnModo.textContent = "☀️";
+} else {
+    document.body.classList.remove("dark-mode");
+    btnModo.textContent = "🌒";
 }
 
 btnModo.addEventListener("click", () => {
@@ -26,7 +34,6 @@ btnModo.addEventListener("click", () => {
 
 
 // Validación de formularios
-
 // Newsletter
 const formNewsletter = document.getElementById("news-form");
 const inputEmail = document.getElementById("news-email");
