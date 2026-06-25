@@ -15,26 +15,34 @@
 
 <body>
     <!-- Inicio del menú -->
-    <header class="navbar navbar-expand-md navbar-light fixed-top">
+    <header class="navbar navbar-expand-md fixed-top">
         <div class="logo container-fluid">
-            <!-- Ícono -->  
+            <!-- Ícono -->    
             <a class="navbar-brand" href="index.html">
                 <img src="assets/logo/logo-glaciares-unahur-v7.png" alt="logo_glaciares_unahur">
             </a>
 
-            <!-- Botón del menú -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex align-items-center gap-2">
+                <!-- Botón modo oscuro -->
+                <button id="btn-modo" class="btn btn-outline-secondary">
+                    🌙
+                </button>
+
+                <!-- Botón del menú -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
         </div>
-        
+
         <!-- Elementos del menú colapsable -->
         <nav class="nav-links collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto gap-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="active nav-link " href="index.html" >Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                <li class="nav-item"><a class="active nav-link" href="programas.html">Programas</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="programas.html">Programas</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>     
             </ul>
         </nav>
     </header>
