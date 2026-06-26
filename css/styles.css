@@ -91,7 +91,7 @@ main {
     height: 52px;
 }
 
-.nav-links ul {
+.nav-links > .navbar-nav {
     display: flex;
     gap: 20px;
     list-style: none;
