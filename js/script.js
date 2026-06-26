@@ -1,3 +1,6 @@
+// Fecha Dinámica
+document.getElementById("year").textContent = new Date().getFullYear()
+
 // Modo Oscuro
 const btnModo = document.getElementById("btn-modo");
 const configActual = localStorage.getItem('theme');
