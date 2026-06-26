@@ -139,7 +139,7 @@ header div button:hover {
 }
 
 .section-contenido {
-    background-color: color-mix(in srgb, var(--fondo-general) 77.5%, transparent);
+    background-color: color-mix(in srgb, var(--fondo-general) 78%, transparent);
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -678,7 +678,7 @@ textarea{
 
  #form-newsletter {
     width: 100%;
-    background-color: var(--fondo-secundario);      
+    background-color: #ABCDE1;      
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
@@ -693,7 +693,9 @@ textarea{
 }
 
 #form-newsletter h2 {
-    background-color: var(--fondo-general);
+    background-color: #E6F2F8;
+    
+    color: #1E5ABA;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
     line-height: 5rem;
@@ -703,6 +705,10 @@ textarea{
     padding-left: 0;                 
     margin-bottom: 25px;
     text-align: center;
+}
+
+#form-newsletter p b {
+    color: #4A4A4A;
 }
 
 #newsletter-primer-parrafo {
@@ -715,7 +721,7 @@ textarea{
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid var(--fondo-secundario);
+    border: 1px solid #ABCDE1;
     border-radius: 4px;
     font-family: 'Lato', sans-serif;
 }
