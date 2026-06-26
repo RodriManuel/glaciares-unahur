@@ -116,22 +116,24 @@ header div button:hover {
     background-color: var(--fondo-secundario);
 }
 
+
+.section-presentacion {
+    background-color: color-mix(in srgb, var(--fondo-general) 90%, transparent);
+}
+
+.section-presentacion p {
+    text-align: center;
+    padding: 0;
+}
+
 .section-contenido {
-    background-color: color-mix(in srgb, var(--fondo-general) 80%, transparent);
+    background-color: color-mix(in srgb, var(--fondo-general) 75%, transparent);
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .section-contenido div p {
     padding: 0;
-}
-
-.section-presentacion {
-    background-color: var(--fondo-general);
-}
-
-.section-presentacion p {
-    text-align: center;
 }
 
 .cards-container {
