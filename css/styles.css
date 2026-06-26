@@ -9,6 +9,7 @@
     --destacado-impacto: #1E5A8A;
     --hoover-azul: #0D47A1;
     --hoover-verde: #1B5E20;
+    --color-card: #E6F2F8;
     --fondo-imagen: url('../assets/img/glaciares/perito_moreno_background.jpg');
 }
 
@@ -22,6 +23,7 @@
     --destacado-impacto: #174a74;
     --hoover-azul: #3B9CC3;
     --hoover-verde: #1B5E20;
+    --color-card: #1E293B;
     --fondo-imagen: url('../assets/img/glaciares/perito_moreno_dark_background.png');
 }
 
@@ -127,7 +129,7 @@ header div button:hover {
 }
 
 .section-contenido {
-    background-color: color-mix(in srgb, var(--fondo-general) 75%, transparent);
+    background-color: color-mix(in srgb, var(--fondo-general) 77.5%, transparent);
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -148,7 +150,7 @@ header div button:hover {
     width: 350px;
     border-radius: 6px;
     overflow: hidden;
-    background-color: var(--fondo-general);
+    background-color: var(--color-card);
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     cursor: default;
 }
