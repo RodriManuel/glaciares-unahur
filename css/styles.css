@@ -2,6 +2,7 @@
 :root {
     --fondo-general: #E6F2F8;
     --fondo-secundario: #ABCDE1;
+    --fondo-submenu: #dde6eb;
     --verde-call-to-action: #2E7D32;
     --gris-texto: #4A4A4A;
     --seccion-clave: #2D7D9D;
@@ -18,6 +19,7 @@
 .dark-mode {
     --fondo-general: #0F172A;
     --fondo-secundario: #1E5A8A;
+    --fondo-submenu: #0c111d;
     --verde-call-to-action: #2E7D32;
     --gris-texto: #E2E8F0;
     --seccion-clave: #286d88;
@@ -101,6 +103,10 @@ main {
     display: flex;
     gap: 20px;
     list-style: none;
+}
+
+.dropdown-menu {
+    background-color: var(--fondo-submenu);
 }
 
 .nav-links ul li a {
