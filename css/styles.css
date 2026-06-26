@@ -10,12 +10,14 @@
     --hoover-azul: #0D47A1;
     --hoover-verde: #1B5E20;
     --color-card: #E6F2F8;
+    --color-link-hover: #2D7D9D;
+    --footer-color: #131A30;
     --fondo-imagen: url('../assets/img/glaciares/perito_moreno_background.jpg');
 }
 
 .dark-mode {
     --fondo-general: #0F172A;
-    --fondo-secundario: #1E293B;
+    --fondo-secundario: #1E5A8A;
     --verde-call-to-action: #2E7D32;
     --gris-texto: #E2E8F0;
     --seccion-clave: #286d88;
@@ -24,6 +26,8 @@
     --hoover-azul: #3B9CC3;
     --hoover-verde: #1B5E20;
     --color-card: #1E293B;
+    --color-link-hover: #ABCDE1;
+    --footer-color: #0a0d16;
     --fondo-imagen: url('../assets/img/glaciares/perito_moreno_dark_background.png');
 }
 
@@ -107,7 +111,7 @@ main {
 
 .nav-links ul li a:hover {
     background-color: var(--fondo-secundario);
-    color: var(--seccion-clave);
+    color: var(--color-link-hover);
 }
 
 .active {
@@ -716,7 +720,7 @@ textarea{
 
 /* FOOTER */
 footer{
-    background-color: #131A30;
+    background-color: var(--footer-color);
     color: var(--fondo-general);
     text-align: center;
     padding: 30px 15px;
