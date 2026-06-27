@@ -106,6 +106,10 @@ main {
     padding-top: 70px;
 }
 
+.main-informe p {
+    padding: 0;
+}
+
 .logo a img {
     width: 154px;
     height: 52px;
