@@ -125,6 +125,10 @@ main {
     background-color: var(--fondo-submenu);
 }
 
+.nav-links {
+    margin-right: 10px;
+}
+
 .nav-links ul li a {
     color: var(--encabezado-destacado);
     text-decoration: none;
@@ -138,10 +142,12 @@ main {
 .nav-links ul li a:hover {
     background-color: var(--fondo-secundario);
     color: var(--color-link-hover);
+    border-radius: 5%;
 }
 
 .active {
     background-color: var(--fondo-secundario);
+    border-radius: 5%;
 }
 
 header div button:hover {
