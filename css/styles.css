@@ -115,6 +115,10 @@ main {
     padding-left: 10px;
 }
 
+.navbar-nav ul li a {
+    padding-left: 15px;
+}
+
 .nav-links ul li a:hover {
     background-color: var(--fondo-secundario);
     color: var(--color-link-hover);
