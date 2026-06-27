@@ -13,6 +13,8 @@
     --color-card: #E6F2F8;
     --color-link-hover: #2D7D9D;
     --footer-color: #131A30;
+    --burger-icon-color: invert(0);
+    --border-icon-menu-color: rgba(0, 0, 0, 0.15);
     --fondo-imagen: url('../assets/img/glaciares/perito_moreno_background.jpg');
 }
 
@@ -30,6 +32,8 @@
     --color-card: #1E293B;
     --color-link-hover: #ABCDE1;
     --footer-color: #0a0d16;
+    --burger-icon-color: invert(1);
+    --border-icon-menu-color: rgba(255, 255, 255, 0.15);
     --fondo-imagen: url('../assets/img/glaciares/perito_moreno_dark_background.png');
 }
 
@@ -73,12 +77,16 @@ header {
 }
 
 #btn-modo {
-    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+    border: var(--bs-border-width) solid var(--border-icon-menu-color);
 }
 
 #btn-modo:hover {
     background-color: transparent;
     color: inherit;                
+}
+
+.navbar-toggler {
+    border: var(--bs-border-width) solid var(--border-icon-menu-color);
 }
 
 .navbar-toggler:hover {
@@ -88,6 +96,10 @@ header {
 .navbar-toggler:focus {
     outline: none;
     box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: var(--burger-icon-color);
 }
 
 main {
