@@ -302,20 +302,22 @@
             <h3>Unite al equipo</h3>
               <p>Completá tus datos y nos pondremos en contacto con vos.</p>
               
-              <form class="formulario-unirse">
+              <form class="formulario-unirse" id="form-unirse" action="#" method="post">
                   <div class="campo">
                       <label for="join-nombre">Nombre completo</label>
-                      <input type="text" id="join-nombre" name="join-nombre" placeholder="Tu nombre..." required>
+                      <input type="text" id="join-nombre" name="join-nombre" placeholder="Tu nombre...">
                   </div>
 
                   <div class="campo">
                       <label for="join-email">Correo UNAHUR / Personal</label>
-                      <input type="email" id="join-email" name="join-email" placeholder="ejemplo@mail.com" required>
+                      <input type="email" id="join-email" name="join-email" placeholder="ejemplo@mail.com">
                   </div>
 
                   <div class="campo">
                       <label for="join-interes">¿En qué área te gustaría ayudar?</label>
                       <select id="join-interes" name="join-interes">
+                          <option value="" selected disabled>Seleccioná una opción...</option>
+
                           <option value="investigacion">Investigación</option>
                           <option value="tecnologia">Tecnología / IT</option>
                           <option value="comunicacion">Comunicación</option>
@@ -324,6 +326,7 @@
                   </div>
 
                   <button type="submit" class="btn btn-success btn-lg mt-3">Enviar Postulación</button>
+                  <div id="unirse-message" class="mt-2"></div>
               </form>
           </div>
           

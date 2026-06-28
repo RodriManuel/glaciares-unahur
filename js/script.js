@@ -5,8 +5,6 @@ document.getElementById("year").textContent = new Date().getFullYear()
 const btnModo = document.getElementById("btn-modo");
 const configActual = localStorage.getItem('theme');
 
-// Verifica si ya hay preferencia guardada o usa la del sistema.
-
 // Determina si debe arrancar en modo oscuro (por localStorage o sistema)
 const esOscuro = configActual === 'dark' || (!configActual && window.matchMedia('(prefers-color-scheme: dark)').matches);
 
@@ -96,4 +94,41 @@ formContacto.addEventListener("submit",(e) =>{
     msgContacto.style.color = "#1A6B2A"; 
 
     formContacto.reset()
+});
+
+//Unirse 
+
+const formUnirse = document.getElementById("form-unirse");
+const inputJoinNombre = document.getElementById("join-nombre");
+const inputJoinEmail = document.getElementById("join-email");
+const selectInteres = document.getElementById("join-interes");
+const msgUnirse = document.getElementById("unirse-message");
+
+formUnirse.addEventListener("summit", (e) => {
+    e.preventDefault();
+
+    const nombre = inputJoinNombre.value.trim();
+    const email = inputJoinEmail.value.trim();
+    const interes = selectInteres.value;
+
+    if(nombre === ""){
+        msgUnirse.textContent = "Por favor, ingresá tu nombre.";
+        msgUnirse.style.color = "#B71C1C";
+        return;
+    }
+    if(email.length < 4 || !email.includes("@")){
+        msgUnirse.textContent = "Por favor, ingresá un correo electrónico válido.";
+        msgUnirse.style.color = "#B71C1C";
+        return;
+    }
+    if (interes === "") {
+        msgUnirse.textContent = "Por favor, seleccioná un área en la que te gustaría ayudar.";
+        msgUnirse.style.color = "#B71C1C";
+        return;
+    }
+
+    msgUnirse.textContent = `¡Gracias ${nombre}! Tus datos fueron validados. Nos contactaremos a: ${email}.`;
+    msgUnirse.style.color = "#1A6B2A"; 
+
+    formUnirse.reset()
 })
