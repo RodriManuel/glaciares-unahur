@@ -3,26 +3,18 @@ document.getElementById("year").textContent = new Date().getFullYear()
 
 // Modo Oscuro
 const btnModo = document.getElementById("btn-modo");
-const configActual = localStorage.getItem('theme');
 
-// Determina si debe arrancar en modo oscuro (por localStorage o sistema)
-const esOscuro = configActual === 'dark' || (!configActual && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-if (esOscuro) {
-    document.body.classList.add("dark-mode");
-    btnModo.textContent = "☀️";
-} else {
-    document.body.classList.remove("dark-mode");
-    btnModo.textContent = "🌒";
-}
+// Sincronizamos el emoji inicial basándonos en lo que ya aplicó el <head>
+const esOscuroActual = document.documentElement.classList.contains("dark-mode");
+btnModo.textContent = esOscuroActual ? "☀️" : "🌒";
 
 btnModo.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+    document.documentElement.classList.toggle("dark-mode");
 
     // Verifica si el modo oscuro quedó activo
-    const modoActivo = document.body.classList.contains("dark-mode");
+    const modoActivo = document.documentElement.classList.contains("dark-mode");
 
-    // Guarda la elección actual en localStorage,
+    // Guarda la elección actual en localStorage
     if (modoActivo) {
         localStorage.setItem('theme', 'dark');
     } else {
