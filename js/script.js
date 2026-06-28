@@ -1,29 +1,35 @@
 // Fecha Dinámica
-document.getElementById("year").textContent = new Date().getFullYear()
+const elYear = document.getElementById("year");
+if (elYear) {
+    elYear.textContent = new Date().getFullYear();
+}
 
 // Modo Oscuro
 const btnModo = document.getElementById("btn-modo");
 
-// Sincronizamos el emoji inicial basándonos en lo que ya aplicó el <head>
-const esOscuroActual = document.documentElement.classList.contains("dark-mode");
-btnModo.textContent = esOscuroActual ? "☀️" : "🌒";
+if(btnModo){
+    // Sincronizamos el emoji inicial basándonos en lo que ya aplicó el <head>
+    const esOscuroActual = document.documentElement.classList.contains("dark-mode");
+    btnModo.textContent = esOscuroActual ? "☀️" : "🌒";
 
-btnModo.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark-mode");
+    btnModo.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark-mode");
 
-    // Verifica si el modo oscuro quedó activo
-    const modoActivo = document.documentElement.classList.contains("dark-mode");
+        // Verifica si el modo oscuro quedó activo
+        const modoActivo = document.documentElement.classList.contains("dark-mode");
 
-    // Guarda la elección actual en localStorage
-    if (modoActivo) {
-        localStorage.setItem('theme', 'dark');
-    } else {
-        localStorage.setItem('theme', 'light');
-    }
+        // Guarda la elección actual en localStorage
+        if (modoActivo) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
 
-    // Cambia el texto del botón según el estado actual
-    btnModo.textContent = modoActivo ? "☀️" : "🌒";
-});
+        // Cambia el texto del botón según el estado actual
+        btnModo.textContent = modoActivo ? "☀️" : "🌒";
+    });
+}
+
 
 
 // Validación de formularios
@@ -70,14 +76,14 @@ const formContacto = document.getElementById("form-mensaje");
 if(formContacto) {
     
     const inputContactoNombre = document.getElementById("nombre");
-    const inoputContactoEmail = document.getElementById("email");
+    const inputContactoEmail = document.getElementById("email");
     const msgContacto = document.getElementById("contacto-message");
 
     formContacto.addEventListener("submit",(e) =>{
         e.preventDefault();
 
         const nombre = inputContactoNombre.value.trim();
-        const email = inoputContactoEmail.value.trim();
+        const email = inputContactoEmail.value.trim();
 
         if(nombre === ""){
             msgContacto.textContent = "Por favor, ingresá tu nombre.";
