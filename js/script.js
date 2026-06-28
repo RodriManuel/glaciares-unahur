@@ -36,99 +36,110 @@ btnModo.addEventListener("click", () => {
 
 // Validación de formularios
 // Newsletter
+
 const formNewsletter = document.getElementById("news-form");
-const inputEmail = document.getElementById("news-email");
-const inputNombre = document.getElementById("news-nombre");
-const inputApellido = document.getElementById("news-apellido");
-const msgNewsletter = document.getElementById("news-message");
 
-formNewsletter.addEventListener("submit", (e) => {
-    e.preventDefault(); // Evita que la página se recargue
+if(formNewsletter) {
+    
+    const inputEmail = document.getElementById("news-email");
+    const inputNombre = document.getElementById("news-nombre");
+    const inputApellido = document.getElementById("news-apellido");
+    const msgNewsletter = document.getElementById("news-message");
 
-    const email = inputEmail.value.trim();
-    const nombre = inputNombre.value.trim();
-    const apellido = inputApellido.value.trim();
+    formNewsletter.addEventListener("submit", (e) => {
+        e.preventDefault(); // Evita que la página se recargue
 
-    if (email.length < 4 || !email.includes("@")) {
-        msgNewsletter.textContent = "Por favor ingresá un email válido.";
-        msgNewsletter.style.color = "#B71C1C";
-        return;
-    }
+        const email = inputEmail.value.trim();
+        const nombre = inputNombre.value.trim();
+        const apellido = inputApellido.value.trim();
 
-    if (nombre === "" || apellido === "") {
-        msgNewsletter.textContent = "Completá todos los campos antes de enviar.";
-        msgNewsletter.className = "error";
-        msgNewsletter.style.color = "#B71C1C";
-        return;
-    }
+        if (email.length < 4 || !email.includes("@")) {
+            msgNewsletter.textContent = "Por favor ingresá un email válido.";
+            msgNewsletter.style.color = "#B71C1C";
+            return;
+        }
 
-    msgNewsletter.textContent = `¡Gracias! Vas a recibir noticias en ${email}.`;
-    msgNewsletter.style.color = "#1A6B2A";
+        if (nombre === "" || apellido === "") {
+            msgNewsletter.textContent = "Completá todos los campos antes de enviar.";
+            msgNewsletter.className = "error";
+            msgNewsletter.style.color = "#B71C1C";
+            return;
+        }
 
-    formNewsletter.reset();
-});
+        msgNewsletter.textContent = `¡Gracias! Vas a recibir noticias en ${email}.`;
+        msgNewsletter.style.color = "#1A6B2A";
 
+        formNewsletter.reset();
+    });
+}
 
 const formContacto = document.getElementById("form-mensaje");
-const inputContactoNombre = document.getElementById("nombre");
-const inoputContactoEmail = document.getElementById("email");
-const msgContacto = document.getElementById("contacto-message");
 
-formContacto.addEventListener("submit",(e) =>{
-    e.preventDefault();
+if(formContacto) {
+    
+    const inputContactoNombre = document.getElementById("nombre");
+    const inoputContactoEmail = document.getElementById("email");
+    const msgContacto = document.getElementById("contacto-message");
 
-    const nombre = inputContactoNombre.value.trim();
-    const email = inoputContactoEmail.value.trim();
+    formContacto.addEventListener("submit",(e) =>{
+        e.preventDefault();
 
-    if(nombre === ""){
-        msgContacto.textContent = "Por favor, ingresá tu nombre.";
-        msgContacto.style.color = "#B71C1C";
-        return;
-    }
-    if(email.length < 4 || !email.includes("@")){
-        msgContacto.textContent = "Por favor, ingresá un correo electrónico válido.";
-        msgContacto.style.color = "#B71C1C";
-        return;
-    }
-    msgContacto.textContent = `¡Mensaje enviado con éxito! Gracias por escribirnos, ${nombre}.`;
-    msgContacto.style.color = "#1A6B2A"; 
+        const nombre = inputContactoNombre.value.trim();
+        const email = inoputContactoEmail.value.trim();
 
-    formContacto.reset()
-});
+        if(nombre === ""){
+            msgContacto.textContent = "Por favor, ingresá tu nombre.";
+            msgContacto.style.color = "#B71C1C";
+            return;
+        }
+        if(email.length < 4 || !email.includes("@")){
+            msgContacto.textContent = "Por favor, ingresá un correo electrónico válido.";
+            msgContacto.style.color = "#B71C1C";
+            return;
+        }
+        msgContacto.textContent = `¡Mensaje enviado con éxito! Gracias por escribirnos, ${nombre}.`;
+        msgContacto.style.color = "#1A6B2A"; 
+
+        formContacto.reset()
+    });
+}
 
 //Unirse 
-
 const formUnirse = document.getElementById("form-unirse");
-const inputJoinNombre = document.getElementById("join-nombre");
-const inputJoinEmail = document.getElementById("join-email");
-const selectInteres = document.getElementById("join-interes");
-const msgUnirse = document.getElementById("unirse-message");
 
-formUnirse.addEventListener("summit", (e) => {
-    e.preventDefault();
+if(formUnirse) {
+    
+    const inputJoinNombre = document.getElementById("join-nombre");
+    const inputJoinEmail = document.getElementById("join-email");
+    const selectInteres = document.getElementById("join-interes");
+    const msgUnirse = document.getElementById("unirse-message");
 
-    const nombre = inputJoinNombre.value.trim();
-    const email = inputJoinEmail.value.trim();
-    const interes = selectInteres.value;
+    formUnirse.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-    if(nombre === ""){
-        msgUnirse.textContent = "Por favor, ingresá tu nombre.";
-        msgUnirse.style.color = "#B71C1C";
-        return;
-    }
-    if(email.length < 4 || !email.includes("@")){
-        msgUnirse.textContent = "Por favor, ingresá un correo electrónico válido.";
-        msgUnirse.style.color = "#B71C1C";
-        return;
-    }
-    if (interes === "") {
-        msgUnirse.textContent = "Por favor, seleccioná un área en la que te gustaría ayudar.";
-        msgUnirse.style.color = "#B71C1C";
-        return;
-    }
+        const nombre = inputJoinNombre.value.trim();
+        const email = inputJoinEmail.value.trim();
+        const interes = selectInteres.value;
 
-    msgUnirse.textContent = `¡Gracias ${nombre}! Tus datos fueron validados. Nos contactaremos a: ${email}.`;
-    msgUnirse.style.color = "#1A6B2A"; 
+        if(nombre === ""){
+            msgUnirse.textContent = "Por favor, ingresá tu nombre.";
+            msgUnirse.style.color = "#B71C1C";
+            return;
+        }
+        if(email.length < 4 || !email.includes("@")){
+            msgUnirse.textContent = "Por favor, ingresá un correo electrónico válido.";
+            msgUnirse.style.color = "#B71C1C";
+            return;
+        }
+        if (interes === "") {
+            msgUnirse.textContent = "Por favor, seleccioná un área en la que te gustaría ayudar.";
+            msgUnirse.style.color = "#B71C1C";
+            return;
+        }
 
-    formUnirse.reset()
-})
+        msgUnirse.textContent = `¡Gracias ${nombre}! Tus datos fueron validados. Nos contactaremos a: ${email}.`;
+        msgUnirse.style.color = "#1A6B2A"; 
+
+        formUnirse.reset()
+    });
+}
