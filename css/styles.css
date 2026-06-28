@@ -241,7 +241,7 @@ ul {
 
 main ul li, section ul li {
     color: var(--encabezado-destacado);  
-    background-image: url(/assets/icons/drop-icon.svg);
+    background-image: url(../assets/icons/drop-icon.svg);
     background-repeat: no-repeat;
     background-size: 18px 18px; 
     background-position: left center;
