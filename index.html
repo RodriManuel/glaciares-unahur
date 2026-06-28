@@ -13,6 +13,10 @@
       
       if (esOscuro) {
         document.documentElement.classList.add('dark-mode');
+        btnModo.textContent = "☀️";
+      } else {
+        document.body.classList.remove("dark-mode");
+        btnModo.textContent = "🌒";
       }
     })();
     </script>
