@@ -428,13 +428,33 @@ figure img {
 /* Estilos aplicados a Nosotros*/
 
 /* NUEVAS CARDS CON BOOTSTRAP */
-
+/*es necesario usar important! al aplicar bootstrap ya que de lo contrario se imponen los estilos por defecto de las cards*/
 .seccion-glaciar .card {
     background-color: rgba(255, 255, 255, 0.85); 
     backdrop-filter: blur(5px);
     
     width: 100% !important; 
     max-width: none !important;
+}
+
+.dark-mode .seccion-glaciar .card { 
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-mode .seccion-glaciar .card h3,
+.dark-mode .seccion-glaciar .card .card-title {
+    color: #38bdf8 !important;
+}
+
+.dark-mode .seccion-glaciar .card p,
+.dark-mode .seccion-glaciar .card .card-text {
+    color: #cbd5e1 !important;
+}
+
+.dark-mode .seccion-glaciar .card strong {
+    color: #ffffff !important;
 }
 
 /*Imagenes Nosotros*/
@@ -533,6 +553,46 @@ figure img {
     background-color: var(--seccion-clave);
 }
 
+/*Modo oscuro para el form*/
+
+.dark-mode .cta-sumate {
+    background-color: #0c1424; 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .cta-sumate h3 {
+    color: #38bdf8;
+}
+
+.dark-mode .cta-sumate p {
+    color: #cbd5e1; 
+}
+
+.dark-mode .campo label {
+    color: #94a3b8; 
+}
+
+.dark-mode .campo input, 
+.dark-mode .campo select {
+    background-color: #16222f; 
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.dark-mode .campo input::placeholder {
+    color: #64748b;
+}
+
+.dark-mode .campo select {
+    color-scheme: dark; 
+}
+
+.dark-mode #unirse-message {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 /* Tabla Objetivos */
 #objetivos .tabla-impacto {
     width: 100%;
@@ -549,18 +609,28 @@ figure img {
 }
 
 #objetivos .tabla-impacto thead tr {
-    background-color: var(--encabezado-destacado);
+    background-color: #1E5ABA;
     color: #FFFFFF;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
+
+.dark-mode #objetivos .tabla-impacto th {
+    background-color: #126; 
+    color: #E0E0E0;  
+}
+
 #objetivos .tabla-impacto tbody tr {
-    border-bottom: 1px solid var(--fondo-secundario);
+    border-bottom: 1px solid #ABCDE1;
     background-color: #FFFFFF;
 }
 
-#objetivos .tabla-impacto td strong {
-    color: var(--encabezado-destacado);
+#objetivos .tabla-impacto tbody tr:nth-child(even) {
+    background-color: var(--fondo-secundario);
+}
+
+#objetivos .tabla-impacto tbody tr:nth-child(odd) {
+    background-color: var(--fondo-general);
 }
 
 /* Linea de tiempo */
@@ -593,7 +663,7 @@ figure img {
 
 /*Fondo y textos de la linea de tiempo */
 .timeline-content {
-    background-color: #ffffff;
+    background-color: var(--color-card);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px var(--fondo-secundario);
@@ -614,6 +684,7 @@ figure img {
     line-height: 1.6;
     color: var(--gris-texto);
 }
+
 .timeline-content strong {
     color: var(--encabezado-destacado);
 }
@@ -630,6 +701,11 @@ figure img {
     background-color: var(--fondo-secundario); 
     border-radius: 4px;
     margin: 25px 0;
+}
+
+.dark-mode .lema-ONG {
+    background-color: #0f172a;
+    color: #4ade80;
 }
 
 /* Contenedor que alinea las tarjetas (Solo en programas) */
