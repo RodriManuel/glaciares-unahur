@@ -193,41 +193,17 @@ puntoDeQuiebre.addEventListener('change', toggleSlideClass);
 
 toggleSlideClass(puntoDeQuiebre);
 
-// FILTRADO DE DIPUTADOS POR BLOQUE POLÍTICO
-function inicializarFiltros() {
-    const botonesFiltro = document.querySelectorAll(".filtro-bloques__btn");
-
-    if (botonesFiltro.length === 0) return;
-
-    botonesFiltro.forEach((boton) => {
-        boton.addEventListener("click", () => {
-            botonesFiltro.forEach((b) => b.classList.remove("filtro-bloques__btn--activo"));
-            boton.classList.add("filtro-bloques__btn--activo");
-
-            const partidoSeleccionado = boton.getAttribute("data-partido");
-            // Se seleccionan las tarjetas dinámicamente al momento de hacer clic
-            const cardsDiputados = document.querySelectorAll(".diputado");
-
-            cardsDiputados.forEach((diputado) => {
-                const partidoDiputado = diputado.getAttribute("data-partido");
-
-                if (partidoSeleccionado === "todos" || partidoDiputado === partidoSeleccionado) {
-                    diputado.classList.remove("oculto");
-                } else {
-                    diputado.classList.add("oculto");
-                }
-            });
-        });
-    });
-}
-
-// Lógica para generar los cards de diputados con la información en diputados.json
+// 1. Variables de Estado Globales
+let todosLosDiputados = [];
 let swiperInstance = null;
 
-// Función principal de carga
+// Guardan el estado actual de los filtros para combinarlos
+let filtroBloqueActual = "todos";
+let terminoBusquedaActual = "";
+
+// 2. Función Principal de Carga de Datos
 async function cargarDatosDiputados() {
     try {
-        // Cargar ambas fuentes de datos en paralelo
         const [respuestaLocal, respuestaApi] = await Promise.all([
             fetch('./assets/data/diputados.json'),
             fetch('https://api.argentinadatos.com/v1/diputados/diputados')
@@ -240,26 +216,38 @@ async function cargarDatosDiputados() {
         const diputadosLocales = await respuestaLocal.json();
         const diputadosApi = await respuestaApi.json();
 
-        // Fusionar los datos locales con los datos de la API
-        const diputadosCombinados = fusionarDiputados(diputadosLocales, diputadosApi);
+        // Guardamos los datos fusionados en la variable global
+        todosLosDiputados = fusionarDiputados(diputadosLocales, diputadosApi);
 
-        // Renderizar e inicializar
-        renderizarDiputados(diputadosCombinados);
-        swiperInstance = inicializarSwiper();
+        // Primer renderizado
+        renderizarDiputados(todosLosDiputados);
+
+        // Inicializamos Swiper después de que existen los slides en el DOM
+        swiperInstance = new Swiper('.swiper-diputados', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Inicializar listeners
         inicializarFiltros();
+        inicializarBuscador();
 
     } catch (error) {
         console.error("Error cargando los diputados:", error);
     }
 }
 
-// Llama a la función principal
+// Iniciar carga
 cargarDatosDiputados();
 
-/**
- * Normaliza cadenas de texto para comparar nombres sin problemas de acentos o mayúsculas
- */
+
+// 3. Normalizador de Texto
 function normalizarTexto(texto = "") {
+    if (!texto) return "";
     return texto
         .toLowerCase()
         .normalize("NFD")
@@ -267,12 +255,68 @@ function normalizarTexto(texto = "") {
         .trim();
 }
 
-/**
- * Combina el JSON local con la respuesta de la API
- */
+
+// 4. Lógica para Aplicar Filtros Combinados (Bloque + Buscador)
+function aplicarFiltros() {
+    const resultados = todosLosDiputados.filter((diputado) => {
+        // A) Validar Filtro de Bloque
+        const partidoDiputado = diputado.partido_slug || diputado.bloque;
+        const coincideBloque = (filtroBloqueActual === "todos") || (partidoDiputado === filtroBloqueActual);
+
+        // B) Validar Filtro del Buscador (Nombre o Provincia)
+        const nombre = normalizarTexto(diputado.nombre);
+        const provincia = normalizarTexto(diputado.provincia);
+        const coincideTexto = nombre.includes(terminoBusquedaActual) || provincia.includes(terminoBusquedaActual);
+
+        // Deben cumplirse ambas condiciones
+        return coincideBloque && coincideTexto;
+    });
+
+    // Renderizar HTML filtrado
+    renderizarDiputados(resultados);
+
+    // Actualizar Swiper y volver al primer slide
+    if (swiperInstance) {
+        swiperInstance.update();
+        swiperInstance.slideTo(0);
+    }
+}
+
+
+// 5. Escuchador para los Botones de Filtro por Bloque
+function inicializarFiltros() {
+    const botonesFiltro = document.querySelectorAll(".filtro-bloques__btn");
+    if (botonesFiltro.length === 0) return;
+
+    botonesFiltro.forEach((boton) => {
+        boton.addEventListener("click", () => {
+            botonesFiltro.forEach((b) => b.classList.remove("filtro-bloques__btn--activo"));
+            boton.classList.add("filtro-bloques__btn--activo");
+
+            // Actualizar estado del bloque seleccionado y aplicar filtros
+            filtroBloqueActual = boton.getAttribute("data-partido");
+            aplicarFiltros();
+        });
+    });
+}
+
+
+// 6. Escuchador para el Input Buscador
+function inicializarBuscador() {
+    const inputBuscador = document.getElementById("buscador");
+    if (!inputBuscador) return;
+
+    inputBuscador.addEventListener("input", (e) => {
+        // Actualizar estado de la búsqueda y aplicar filtros
+        terminoBusquedaActual = normalizarTexto(e.target.value);
+        aplicarFiltros();
+    });
+}
+
+
+// 7. Combinar JSON Local + API
 function fusionarDiputados(locales, api) {
     return locales.map(local => {
-        // Buscar coincidencia en la API por ID o por coincidencia de Nombre + Apellido
         const coincidenciaApi = api.find(itemApi => {
             const nombreCompletoApi = normalizarTexto(`${itemApi.nombre} ${itemApi.apellido}`);
             const nombreLocal = normalizarTexto(local.nombre);
@@ -280,21 +324,16 @@ function fusionarDiputados(locales, api) {
             return itemApi.id === local.id || nombreCompletoApi === nombreLocal;
         });
 
-        // Si no se encuentra en la API, devolver solo el objeto local
         if (!coincidenciaApi) return local;
 
-        // Si la foto en la API es una URL completa, la usamos; de lo contrario, la imagen local
         const fotoFinal = coincidenciaApi.foto && coincidenciaApi.foto.startsWith("http")
             ? coincidenciaApi.foto
             : `assets/img/diputados/${local.foto}`;
 
-        // Combinar ambas fuentes (dando prioridad a la API en datos oficiales si así lo deseas)
         return {
-            ...local, // Conserva los datos locales (voto, descripcion, profesion, etc.)
-            ...coincidenciaApi, // Agrega datos de la API (bloque, periodoMandato, juramentoFecha, etc.)
-            
-            // Sobrescribimos campos donde quieras lógica personalizada:
-            nombre: local.nombre, // Mantiene el formato local si prefieres
+            ...local,
+            ...coincidenciaApi,
+            nombre: local.nombre,
             bloque: coincidenciaApi.bloque || local.partido,
             foto: fotoFinal,
             provincia: local.provincia || coincidenciaApi.provincia
@@ -302,9 +341,20 @@ function fusionarDiputados(locales, api) {
     });
 }
 
+
+// 8. Renderizado del DOM
 function renderizarDiputados(diputados) {
     const container = document.querySelector(".diputados"); 
     container.innerHTML = "";
+
+    if (diputados.length === 0) {
+        container.innerHTML = `
+            <div class="swiper-slide sin-resultados" style="text-align: center; width: 100%; padding: 20px;">
+                <p>No se encontraron diputados que coincidan con la búsqueda.</p>
+            </div>
+        `;
+        return;
+    }
 
     diputados.forEach((diputado, index) => {
         const card = document.createElement("article");
@@ -312,9 +362,6 @@ function renderizarDiputados(diputados) {
         card.classList.add("diputado", "swiper-slide");
         card.setAttribute("data-partido", diputado.partido_slug || diputado.bloque);
 
-        const collapseId = `collapse-${diputado.id || index}`;
-
-        // Determinar el origen de la imagen (URL remota o local)
         const imgSrc = diputado.foto.startsWith("http") 
             ? diputado.foto 
             : `assets/img/diputados/${diputado.foto}`;
@@ -342,23 +389,5 @@ function renderizarDiputados(diputados) {
         `;
 
         container.appendChild(card);
-    });
-}
-
-function inicializarSwiper() {
-    return new Swiper('.swiper-diputados', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        // Permite recalculado de posiciones si los elementos se ocultan o muestran por JS
-        observer: true,
-        observeParents: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-        }
     });
 }
