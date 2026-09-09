@@ -407,8 +407,8 @@ h3{
 }
 
 .btnModal__container button {
-    padding: .5rem;
-    font-size: 1.25rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
     background-color: #CD201F;
     color: #FFFFFF;
@@ -420,14 +420,14 @@ h3{
 
 .play__img {
     filter: brightness(1) invert(1);
-    width: 1.45em;
+    width: 1.15em;
     height: auto;
 }
 
 .btnModal__inner {
     padding: .35rem .25rem .35rem .5rem;
     font-weight: 400;
-    color: white;
+    color: var(--fondo-general);
     background-color: var(--destacado-impacto);
     border: none;
     border-radius: 8px;
@@ -436,10 +436,18 @@ h3{
 }
 
 .close__img {
-    filter: brightness(1) invert(1);
+    filter: var(--icon-svg-color);
     width: 1.35em;
     height: auto;
     margin: 0;
+}
+
+.modal-content {
+    background-color: var(--color-card);
+}
+
+.modal-title {
+    color: var(--encabezado-destacado);
 }
 
 /* Tabla en glaciares-argentinos.html */
