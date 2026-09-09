@@ -228,7 +228,7 @@ section {
 .inicio__link {
     display: inline-flex;
     align-items: center;
-    color: var(--fondo-general);
+    color: #E6F2F8;
     font-size: 0.9rem; 
     font-weight: 550; 
     background-color: var(--verde-call-to-action);
@@ -238,7 +238,7 @@ section {
 }
 
 .inicio__link__img {
-    filter: var(--icon-svg-color);
+    filter: brightness(1) invert(1); 
     width: 1.5em;
     height: auto;
 }
