@@ -244,6 +244,7 @@ section {
 }
 
 .hero__link__img {
+    filter: var(--icon-svg-color); 
     width: 1.2rem;
     padding-bottom: 0.12rem;
 }
